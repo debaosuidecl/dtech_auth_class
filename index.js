@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const auth = require("./routes/auth")
-const MONGO_URI = "mongodb+srv://deba:test123@cluster0.mtqmn.mongodb.net/authnode?retryWrites=true&w=majority"
+const MONGO_URI= process.env.MONGO_URI
 app.use(express.json());
 
 
