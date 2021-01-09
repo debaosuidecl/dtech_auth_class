@@ -1,0 +1,39 @@
+JWT
+is a method that actually encrypts user details. for later retrieval when needed.
+
+
+
+USER ARRIVES ON OUR SIGN UP PAGE
+
+ENTERS THEIR DETAILS AND PASSWORD.
+
+WE ENCRYPT THEIR PASSWORD
+AND SAVE THEIR DETIALS AND THEIR ENCRYPTED PASSWORD TO OUR DATABASE
+
+
+
+
+THEN WE encrypt their USER ID into  JWT TOKEN. and then we send that token back to the user and store it in the users local storage. 
+(userid=> token)encryption
+
+so that whenever they make a request to our website, the token is sent to our server,
+ and we decrypt the token to be sure that its is meant for the user that is sending it   (token => userid) decryption
+
+ we use the user id to find the user in our database. and if that user exists we then allow the user to access  his contents.
+
+ {
+     userid: "2f2fj3fjkdfasfd"
+ }
+
+
+ //sign in process
+
+ the user enters their email and password.
+
+ the email and password hits our server and 
+ we need to find the user by the email
+ we then encrypt the password entered by the user using the same bcrypt package. 
+ and we make a comparison to the password of that same user in our database
+ if the 2 encryptions are the same, we grant the user access
+
+localStorage(JWT) ----- TO THE SERVER ---- WE THEN DECRYPT THE TOKEN TO BE SURE IT IS LEGIT FOR THE USER SENDING IT.
